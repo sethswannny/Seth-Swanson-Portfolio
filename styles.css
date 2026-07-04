@@ -222,9 +222,26 @@ h1 {
 
 .hero-copy {
   max-width: 630px;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   color: #35413f;
   font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.credential-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.credential-strip span {
+  padding: 7px 10px;
+  color: var(--teal-dark);
+  border: 1px solid rgba(11, 107, 104, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 253, 250, 0.78);
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .hero-actions {
@@ -451,6 +468,14 @@ h1 {
 
 .main-project-card p {
   color: var(--muted);
+}
+
+.business-value {
+  margin-top: 14px;
+  padding-left: 14px;
+  color: #344946;
+  border-left: 4px solid var(--mustard);
+  font-weight: 650;
 }
 
 .main-project-media {
