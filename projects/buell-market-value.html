@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buell Market Value Predictor | Seth Swanson</title>
+    <meta name="description" content="A portfolio case study by Seth Swanson: a Buell motorcycle market value predictor built with synthetic marketplace data, Python, scikit-learn, and Streamlit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+      <a class="header-cta" href="../assets/Seth-Swanson-Resume-2026.docx" download>Resume</a>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Machine Learning Case Study</p>
+          <h1>Buell Market Value Predictor</h1>
+          <p>
+            I wanted a public project that felt closer to a real pricing and deal-screening problem than a stock
+            tutorial dataset. This one predicts motorcycle listing prices, then translates the prediction into a
+            simple deal label a buyer or marketplace analyst could actually use.
+          </p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>scikit-learn</span>
+            <span>Regression</span>
+            <span>Streamlit</span>
+            <span>Synthetic Data</span>
+          </div>
+        </div>
+        <div class="case-stat-panel" aria-label="Model performance summary">
+          <div>
+            <span>3,000</span>
+            <p>synthetic marketplace listings</p>
+          </div>
+          <div>
+            <span>$1,031</span>
+            <p>test-set mean absolute error</p>
+          </div>
+          <div>
+            <span>0.978</span>
+            <p>test-set R-squared</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Problem</p>
+            <h2>Could a model spot whether a Buell listing is fairly priced?</h2>
+            <p>
+              The goal was not to make an official appraisal tool. The goal was to show the full data science workflow:
+              define the decision, build a safe dataset, train multiple models, compare results, explain drivers, and
+              turn the output into something usable.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Approach</p>
+            <h2>Built the market first, then trained against it.</h2>
+            <p>
+              I generated listings for Buell models and comparable motorcycles using variables a marketplace would
+              plausibly expose: mileage, condition, seller type, region, season, title status, performance specs,
+              service records, listing photos, and description quality.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">Modeling</p>
+          <h2>Three models, one practical winner.</h2>
+        </div>
+        <div class="metrics-table-wrap">
+          <table class="metrics-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>MAE</th>
+                <th>RMSE</th>
+                <th>R2</th>
+                <th>MAPE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Histogram Gradient Boosting</td>
+                <td>$1,030.90</td>
+                <td>$1,668.11</td>
+                <td>0.9775</td>
+                <td>0.1118</td>
+              </tr>
+              <tr>
+                <td>Random Forest</td>
+                <td>$1,115.78</td>
+                <td>$1,899.05</td>
+                <td>0.9709</td>
+                <td>0.1033</td>
+              </tr>
+              <tr>
+                <td>Ridge Regression</td>
+                <td>$2,459.76</td>
+                <td>$3,184.76</td>
+                <td>0.9182</td>
+                <td>0.8978</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-visual-grid">
+          <figure>
+            <img src="../ml_projects/buell_market_value/reports/figures/actual_vs_predicted.png" alt="Actual versus predicted motorcycle listing price chart">
+            <figcaption>Actual vs. predicted prices show the final model tracking the synthetic market structure closely.</figcaption>
+          </figure>
+          <figure>
+            <img src="../ml_projects/buell_market_value/reports/figures/feature_importance.png" alt="Feature importance chart for motorcycle listing price model">
+            <figcaption>Permutation importance makes the model easier to explain beyond just reporting a score.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">What I Would Improve</p>
+            <h2>The honest limitations matter.</h2>
+            <p>
+              The current dataset is synthetic, so the model proves workflow more than market truth. If I expanded this,
+              I would compare against public valuation guides, add real listing snapshots where licensing allows it,
+              track time-based price drift, and separate Buell-only performance from broader motorcycle comparables.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Artifacts</p>
+            <h2>Everything is reproducible.</h2>
+            <p>
+              The project includes a data generator, training pipeline, saved model, model metadata, charts, report,
+              data dictionary, and Streamlit app. The code is structured so a reviewer can rerun the whole workflow.
+            </p>
+            <div class="project-links">
+              <a href="../ml_projects/buell_market_value/README.md">README</a>
+              <a href="../ml_projects/buell_market_value/reports/project_report.md">Project Report</a>
+              <a href="../ml_projects/buell_market_value/dist/buell_market_value_one_file.html">One-File Report</a>
+              <a href="../ml_projects/buell_market_value/src/train_model.py">Training Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+  </body>
+</html>

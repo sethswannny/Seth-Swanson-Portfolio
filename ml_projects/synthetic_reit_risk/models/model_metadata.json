@@ -1,0 +1,55 @@
+{
+  "best_model": "logistic_regression",
+  "target": "portfolio_health",
+  "rows": 5200,
+  "class_order": [
+    "healthy",
+    "watchlist",
+    "at risk"
+  ],
+  "features": [
+    "property_type",
+    "region",
+    "tenant_industry",
+    "credit_tier",
+    "annual_rent",
+    "property_value",
+    "asset_age",
+    "lease_term_remaining",
+    "occupancy_rate",
+    "rent_coverage_ratio",
+    "noi_margin",
+    "sales_trend_12m",
+    "traffic_trend_12m",
+    "capex_need_pct_value",
+    "delinquency_days",
+    "arrears_pct_annual_rent",
+    "tenant_concentration_pct",
+    "local_unemployment",
+    "market_rent_growth",
+    "renewal_probability"
+  ],
+  "metrics": [
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.859,
+      "balanced_accuracy": 0.8544,
+      "macro_f1": 0.8262,
+      "weighted_f1": 0.8652
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "accuracy": 0.8694,
+      "balanced_accuracy": 0.8087,
+      "macro_f1": 0.8168,
+      "weighted_f1": 0.8696
+    },
+    {
+      "model": "random_forest",
+      "accuracy": 0.8373,
+      "balanced_accuracy": 0.8045,
+      "macro_f1": 0.7932,
+      "weighted_f1": 0.8425
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+model,mae,rmse,r2,mape
+hist_gradient_boosting,1030.9,1668.11,0.9775,0.1118
+random_forest,1115.78,1899.05,0.9709,0.1033
+ridge_regression,2459.76,3184.76,0.9182,0.8978

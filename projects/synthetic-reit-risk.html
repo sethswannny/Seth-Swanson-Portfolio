@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Synthetic REIT Risk Model | Seth Swanson</title>
+    <meta name="description" content="A portfolio case study by Seth Swanson: a synthetic REIT portfolio risk classifier built with Python, scikit-learn, and Streamlit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+      <a class="header-cta" href="../assets/Seth-Swanson-Resume-2026.docx" download>Resume</a>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Machine Learning Case Study</p>
+          <h1>Synthetic REIT Portfolio Risk Model</h1>
+          <p>
+            A portfolio-safe classifier that screens fictional REIT assets into healthy, watchlist, and at-risk
+            groups using lease, financial, tenant, and market signals.
+          </p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>scikit-learn</span>
+            <span>Classification</span>
+            <span>Portfolio Risk</span>
+            <span>Streamlit</span>
+          </div>
+        </div>
+        <div class="case-stat-panel" aria-label="Model performance summary">
+          <div>
+            <span>5,200</span>
+            <p>synthetic REIT assets</p>
+          </div>
+          <div>
+            <span>0.826</span>
+            <p>best model macro F1</p>
+          </div>
+          <div>
+            <span>0.854</span>
+            <p>balanced accuracy</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Problem</p>
+            <h2>Which assets need portfolio attention?</h2>
+            <p>
+              The model classifies assets into health buckets so a portfolio team can prioritize review. The point is
+              not to create a production credit model; it is to show the workflow behind explainable asset health
+              analytics without exposing private data.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Approach</p>
+            <h2>Built a diversified synthetic portfolio.</h2>
+            <p>
+              The generated dataset includes industrial, grocery, quick service restaurant, medical office,
+              automotive, convenience store, fitness, entertainment, office, and distribution assets across regions,
+              credit tiers, rent coverage profiles, lease terms, delinquency, and market trends.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">Modeling</p>
+          <h2>The baseline won, which is useful.</h2>
+        </div>
+        <p class="case-lead">
+          Logistic regression beat the tree-based models on macro F1. That makes the project more credible: the
+          simplest model was easier to explain and performed best on class balance.
+        </p>
+        <div class="metrics-table-wrap">
+          <table class="metrics-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Accuracy</th>
+                <th>Balanced Accuracy</th>
+                <th>Macro F1</th>
+                <th>Weighted F1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Logistic Regression</td>
+                <td>0.8590</td>
+                <td>0.8544</td>
+                <td>0.8262</td>
+                <td>0.8652</td>
+              </tr>
+              <tr>
+                <td>Hist Gradient Boosting</td>
+                <td>0.8694</td>
+                <td>0.8087</td>
+                <td>0.8168</td>
+                <td>0.8696</td>
+              </tr>
+              <tr>
+                <td>Random Forest</td>
+                <td>0.8373</td>
+                <td>0.8045</td>
+                <td>0.7932</td>
+                <td>0.8425</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-visual-grid">
+          <figure>
+            <img src="../ml_projects/synthetic_reit_risk/reports/figures/confusion_matrix.png" alt="Confusion matrix for REIT portfolio health classifier">
+            <figcaption>Confusion matrix for healthy, watchlist, and at-risk classification.</figcaption>
+          </figure>
+          <figure>
+            <img src="../ml_projects/synthetic_reit_risk/reports/figures/exposure_by_property_type.png" alt="Portfolio exposure by property type and health">
+            <figcaption>Portfolio value exposure by property type and health status.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">What I Would Improve</p>
+            <h2>Production would need governance.</h2>
+            <p>
+              A real version would require validated source systems, historical outcomes, time-based validation,
+              threshold governance, portfolio manager review, and monitoring for drift. This project is deliberately a
+              safe public workflow demo.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Artifacts</p>
+            <h2>Everything is reproducible.</h2>
+            <p>
+              The project includes a synthetic data generator, training pipeline, saved classifier, confusion matrix,
+              feature importance, watchlist output, Streamlit app, and standalone one-file report.
+            </p>
+            <div class="project-links">
+              <a href="../ml_projects/synthetic_reit_risk/README.md">README</a>
+              <a href="../ml_projects/synthetic_reit_risk/reports/project_report.md">Project Report</a>
+              <a href="../ml_projects/synthetic_reit_risk/dist/reit_risk_one_file.html">One-File Report</a>
+              <a href="../ml_projects/synthetic_reit_risk/src/train_model.py">Training Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+  </body>
+</html>

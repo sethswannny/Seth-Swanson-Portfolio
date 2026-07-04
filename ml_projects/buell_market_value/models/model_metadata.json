@@ -1,0 +1,53 @@
+{
+  "best_model": "hist_gradient_boosting",
+  "target": "listing_price",
+  "rows": 3000,
+  "features": [
+    "make",
+    "model",
+    "family",
+    "year",
+    "age",
+    "mileage",
+    "condition",
+    "seller_type",
+    "region",
+    "season",
+    "title_status",
+    "engine_cc",
+    "horsepower",
+    "torque_ft_lbs",
+    "weight_lbs",
+    "power_to_weight",
+    "abs",
+    "carbon_fiber",
+    "mods_score",
+    "service_records",
+    "num_photos",
+    "description_score",
+    "days_on_market"
+  ],
+  "metrics": [
+    {
+      "model": "hist_gradient_boosting",
+      "mae": 1030.9,
+      "rmse": 1668.11,
+      "r2": 0.9775,
+      "mape": 0.1118
+    },
+    {
+      "model": "random_forest",
+      "mae": 1115.78,
+      "rmse": 1899.05,
+      "r2": 0.9709,
+      "mape": 0.1033
+    },
+    {
+      "model": "ridge_regression",
+      "mae": 2459.76,
+      "rmse": 3184.76,
+      "r2": 0.9182,
+      "mape": 0.8978
+    }
+  ]
+}

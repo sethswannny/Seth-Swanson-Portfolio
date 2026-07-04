@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seth Swanson | Data Scientist Portfolio</title>
+    <meta name="description" content="Portfolio for Seth Swanson, a data analyst and data scientist specializing in SQL, Python, BI automation, risk modeling, and executive analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+      <a class="header-cta" href="assets/Seth-Swanson-Resume-2026.docx" download>Resume</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/data-workspace-hero.png" alt="Modern data science workspace with abstract dashboards and analytical visuals">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="eyebrow">Strategic Analytics / Data Science</p>
+            <h1 id="hero-title">Building models, dashboards, and decision systems.</h1>
+            <p class="hero-copy">I turn complex business data into analytics products: models, API pipelines, automations, and executive dashboards that help teams act.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View Projects</a>
+              <a class="button secondary" href="mailto:Sethswanson95@gmail.com">Contact Me</a>
+              <a class="button secondary" href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          <div class="hero-portrait-wrap" aria-label="Portrait of Seth Swanson">
+            <img class="hero-portrait" src="assets/profile-pic.jpeg" alt="Seth Swanson">
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-section" aria-label="Project focus">
+        <div class="section-heading">
+          <p class="eyebrow">Focus</p>
+          <h2>Analytics work with product sense.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            My work sits between data science, BI, and product thinking: SQL models, Python workflows, executive
+            dashboards, risk segmentation, and user-facing apps.
+          </p>
+          <p>
+            MyOrdr shows the product-building side. The Buell and REIT projects show the public machine learning
+            side: reproducible models with code, evaluation, visuals, offline reports, and working demos.
+          </p>
+        </div>
+      </section>
+
+      <section class="section project-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Main Projects</p>
+          <h2 id="projects-title">Three portfolio builds that show the range.</h2>
+        </div>
+        <div class="main-project-grid">
+          <article class="main-project-card">
+            <div class="main-project-media">
+              <img src="assets/projects/myordr-showcase.png" alt="MyOrdr app website showing iPhone screens and order cards">
+            </div>
+            <div>
+              <p class="project-kicker">Product Build / Mobile Analytics</p>
+              <h3>MyOrdr</h3>
+              <p>
+                Cross-platform iOS and Android social ordering app with a Supabase relational database, product
+                analytics, relevance-scored search, sharing flows, notifications, and deployed web infrastructure.
+              </p>
+              <div class="project-meta">
+                <span>Flutter</span>
+                <span>Supabase</span>
+                <span>iOS</span>
+                <span>Android</span>
+                <span>Product Analytics</span>
+              </div>
+              <div class="project-links">
+                <a href="https://app.myordr.co" target="_blank" rel="noreferrer">Live App</a>
+                <a href="https://www.datascienceportfol.io/sethswanson/projects/9" target="_blank" rel="noreferrer">Case Study</a>
+              </div>
+            </div>
+          </article>
+          <article class="main-project-card">
+            <div class="main-project-media">
+              <img src="ml_projects/buell_market_value/reports/figures/actual_vs_predicted.png" alt="Actual versus predicted prices from the Buell market value model">
+            </div>
+            <p class="project-kicker">Regression / Pricing</p>
+            <h3>Buell Market Value Predictor</h3>
+            <p>
+              End-to-end motorcycle marketplace model with synthetic data, price prediction, model comparison,
+              explainability, a Streamlit app, and a no-server one-file report.
+            </p>
+            <div class="project-meta">
+              <span>Regression</span>
+              <span>Python</span>
+              <span>scikit-learn</span>
+              <span>Streamlit</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/buell-market-value.html">Case Study</a>
+              <a href="ml_projects/buell_market_value/dist/buell_market_value_one_file.html">One-File Report</a>
+              <a href="ml_projects/buell_market_value/README.md">Code README</a>
+            </div>
+          </article>
+          <article class="main-project-card">
+            <div class="main-project-media">
+              <img src="ml_projects/synthetic_reit_risk/reports/figures/exposure_by_property_type.png" alt="REIT portfolio exposure by property type and health status">
+            </div>
+            <p class="project-kicker">Classification / Risk</p>
+            <h3>Synthetic REIT Portfolio Risk Model</h3>
+            <p>
+              Diversified fake REIT portfolio classifier that screens assets as healthy, watchlist, or at risk using
+              lease, financial, tenant, and market signals.
+            </p>
+            <div class="project-meta">
+              <span>Classification</span>
+              <span>Risk Analytics</span>
+              <span>Python</span>
+              <span>scikit-learn</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/synthetic-reit-risk.html">Case Study</a>
+              <a href="ml_projects/synthetic_reit_risk/dist/reit_risk_one_file.html">One-File Report</a>
+              <a href="ml_projects/synthetic_reit_risk/README.md">Code README</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section work-summary-section" aria-labelledby="work-summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Supporting Projects</p>
+          <h2 id="work-summary-title">Professional sub-projects and shipped analytics work.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-tags="modeling bi">
+            <p class="project-kicker">STORE Capital</p>
+            <h3>Portfolio Risk & Reporting</h3>
+            <p>
+              SQL models and Power BI dashboards for portfolio health, forecasting, and asset-level risk decisions.
+            </p>
+            <div class="project-meta">
+              <span>SQL</span>
+              <span>Power BI</span>
+              <span>Risk Analytics</span>
+            </div>
+          </article>
+          <article class="project-card" data-tags="bi automation">
+            <p class="project-kicker">STORE Capital</p>
+            <h3>Lead Generation API Pipeline</h3>
+            <p>
+              Automated lead validation workflow using database records, third-party APIs, AI model calls, and quality guardrails.
+            </p>
+            <div class="project-meta">
+              <span>APIs</span>
+              <span>AI</span>
+              <span>Automation</span>
+            </div>
+          </article>
+          <article class="project-card" data-tags="bi automation">
+            <p class="project-kicker">STORE Capital</p>
+            <h3>Data Model Modernization</h3>
+            <p>
+              Reworked queries and dimensional models to cut refreshes from 20+ minutes to under 2 minutes.
+            </p>
+            <div class="project-meta">
+              <span>SQL</span>
+              <span>SCD</span>
+              <span>Automation</span>
+            </div>
+          </article>
+          <article class="project-card" data-tags="modeling bi">
+            <p class="project-kicker">Education Elements</p>
+            <h3>Survey & Engagement Analytics</h3>
+            <p>
+              Analyzed student survey data and built dashboards for engagement, belonging, and performance trends.
+            </p>
+            <div class="project-meta">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Looker</span>
+            </div>
+          </article>
+          <article class="project-card" data-tags="automation bi">
+            <p class="project-kicker">Education Elements</p>
+            <h3>Report Automation</h3>
+            <p>
+              Automated repeatable visuals and client-ready reporting workflows for executive-facing deliverables.
+            </p>
+            <div class="project-meta">
+              <span>Pandas</span>
+              <span>Matplotlib</span>
+              <span>PowerPoint</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="skills-title">The stack I use to ship reliable analytics.</h2>
+        </div>
+        <div class="skills-grid">
+          <div>
+            <h3>Programming & Analysis</h3>
+            <p>Python, pandas, NumPy, matplotlib, seaborn, SQL, regression analysis, exploratory data analysis, probability analytics.</p>
+          </div>
+          <div>
+            <h3>BI & Visualization</h3>
+            <p>Power BI, Tableau, Looker, DAX, dashboard design, executive reporting, stakeholder presentations.</p>
+          </div>
+          <div>
+            <h3>Data Modeling & Quality</h3>
+            <p>SQL Server, dimensional models, fact tables, slowly changing dimensions, validation checks, and reliable reporting datasets.</p>
+          </div>
+          <div>
+            <h3>Business Strengths</h3>
+            <p>Requirements gathering, documentation, forecasting support, process improvement, automation, and clear communication.</p>
+          </div>
+          <div>
+            <h3>Product Builds</h3>
+            <p>Flutter, Dart, Supabase, relational product databases, search relevance logic, notifications, sharing flows, Netlify, Cloudflare, and Resend.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Let’s talk about data work that needs clarity.</h2>
+            <p>
+              I’m open to data analyst, data scientist, BI, and analytics engineering opportunities where measurable
+              business impact matters.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:Sethswanson95@gmail.com">Sethswanson95@gmail.com</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button secondary" href="tel:+12248000758">(224) 800-0758</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
