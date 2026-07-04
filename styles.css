@@ -542,8 +542,32 @@ h1 {
   grid-template-columns: minmax(320px, 1fr) minmax(280px, 420px);
   gap: clamp(28px, 6vw, 72px);
   align-items: end;
-  padding: clamp(72px, 10vw, 126px) clamp(18px, 5vw, 64px);
+  padding: clamp(42px, 8vw, 96px) clamp(18px, 5vw, 64px) clamp(72px, 10vw, 126px);
   background: var(--paper);
+}
+
+.case-nav {
+  padding: 28px clamp(18px, 5vw, 64px) 0;
+  background: var(--paper);
+}
+
+.back-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  color: var(--teal-dark);
+  font-weight: 850;
+  border: 1px solid rgba(11, 107, 104, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 28px rgba(20, 32, 31, 0.08);
+}
+
+.back-link::before {
+  content: "<";
+  font-weight: 900;
 }
 
 .case-hero-copy {

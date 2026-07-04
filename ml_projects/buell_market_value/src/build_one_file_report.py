@@ -130,6 +130,27 @@ def main() -> None:
           linear-gradient(90deg, rgba(247,244,238,.98), rgba(247,244,238,.9)),
           radial-gradient(circle at 82% 22%, rgba(11,107,104,.18), transparent 34%);
       }}
+      .report-nav {{
+        padding-bottom: 0;
+      }}
+      .back-link {{
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 13px;
+        color: var(--teal-dark);
+        border: 1px solid rgba(11,107,104,.2);
+        border-radius: 8px;
+        background: rgba(255,255,255,.82);
+        box-shadow: 0 10px 28px rgba(20,32,31,.08);
+        font-weight: 850;
+        text-decoration: none;
+      }}
+      .back-link::before {{
+        content: "<";
+        font-weight: 900;
+      }}
       .eyebrow {{
         margin: 0 0 12px;
         color: var(--coral);
@@ -254,6 +275,9 @@ def main() -> None:
     </style>
   </head>
   <body>
+    <section class="report-nav">
+      <a class="back-link" href="../../../index.html#projects">Back to portfolio</a>
+    </section>
     <header>
       <div>
         <p class="eyebrow">One-File Portfolio Dossier</p>
