@@ -18,11 +18,13 @@ filterButtons.forEach((button) => {
 });
 
 if (carousel) {
+  const AUTO_ROTATE_MS = 3600;
   const track = carousel.querySelector("[data-carousel-track]");
   const cards = Array.from(track.querySelectorAll(".main-project-card"));
   const previousButton = carousel.querySelector("[data-carousel-prev]");
   const nextButton = carousel.querySelector("[data-carousel-next]");
   const dotsWrap = carousel.querySelector("[data-carousel-dots]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeIndex = 0;
   let timer;
 
@@ -59,6 +61,12 @@ if (carousel) {
       dot.classList.toggle("is-active", dotIndex === activeIndex);
       dot.setAttribute("aria-current", dotIndex === activeIndex ? "true" : "false");
     });
+
+    if (carousel.classList.contains("is-running") && !reduceMotion.matches) {
+      carousel.classList.remove("is-running");
+      void carousel.offsetWidth;
+      carousel.classList.add("is-running");
+    }
   }
 
   function next() {
@@ -67,7 +75,14 @@ if (carousel) {
 
   function restart() {
     window.clearInterval(timer);
-    timer = window.setInterval(next, 5200);
+    carousel.classList.remove("is-running");
+
+    if (reduceMotion.matches) return;
+
+    window.requestAnimationFrame(() => {
+      carousel.classList.add("is-running");
+      timer = window.setInterval(next, AUTO_ROTATE_MS);
+    });
   }
 
   previousButton.addEventListener("click", () => {
@@ -80,9 +95,15 @@ if (carousel) {
     restart();
   });
 
-  carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
+  carousel.addEventListener("mouseenter", () => {
+    window.clearInterval(timer);
+    carousel.classList.remove("is-running");
+  });
   carousel.addEventListener("mouseleave", restart);
-  carousel.addEventListener("focusin", () => window.clearInterval(timer));
+  carousel.addEventListener("focusin", () => {
+    window.clearInterval(timer);
+    carousel.classList.remove("is-running");
+  });
   carousel.addEventListener("focusout", restart);
   window.addEventListener("resize", () => setActive(activeIndex));
 
