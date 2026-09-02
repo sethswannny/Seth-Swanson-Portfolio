@@ -182,36 +182,23 @@ a {
 .hero-profile-card {
   justify-self: center;
   position: relative;
-  width: min(470px, 100%);
-  padding: clamp(16px, 2vw, 22px);
+  width: min(520px, 100%);
+  padding: clamp(18px, 2vw, 24px);
   border: 1px solid rgba(103, 232, 249, 0.18);
   border-radius: 8px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
-    rgba(9, 20, 38, 0.82);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)),
+    linear-gradient(135deg, rgba(14, 28, 51, 0.94), rgba(7, 17, 31, 0.92));
   box-shadow: 0 38px 100px rgba(0, 0, 0, 0.38);
 }
 
-.hero-profile-card::before,
-.hero-profile-card::after {
+.hero-profile-card::before {
   content: "";
   position: absolute;
   pointer-events: none;
-}
-
-.hero-profile-card::before {
   inset: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-}
-
-.hero-profile-card::after {
-  right: -22px;
-  bottom: -18px;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(103, 232, 249, 0.22), transparent 68%);
 }
 
 .profile-card-header {
@@ -227,8 +214,37 @@ a {
   text-transform: uppercase;
 }
 
+.profile-identity {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.profile-identity strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+
+.profile-identity p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .hero-portrait-wrap {
   position: relative;
+  width: 92px;
   aspect-ratio: 1;
   border-radius: 8px;
   background: #0c182b;
@@ -254,6 +270,41 @@ a {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+.profile-flow {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) auto minmax(0, 1.1fr) auto minmax(0, 0.9fr) auto minmax(0, 1.1fr);
+  gap: 8px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid rgba(103, 232, 249, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(103, 232, 249, 0.08), rgba(255, 255, 255, 0.035));
+}
+
+.profile-flow span:not(.flow-arrow) {
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  background: rgba(5, 11, 24, 0.42);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.flow-arrow {
+  color: var(--cyan);
+  font-size: 1.1rem;
+  font-weight: 850;
 }
 
 .profile-signal-grid {
@@ -1347,6 +1398,24 @@ h1 {
   .profile-card-header {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .profile-identity {
+    grid-template-columns: 76px minmax(0, 1fr);
+    padding: 12px;
+  }
+
+  .hero-portrait-wrap {
+    width: 76px;
+  }
+
+  .profile-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    justify-self: center;
   }
 
   .hero-overlay {
