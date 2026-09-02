@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seth Swanson | Analytics & Data Science Portfolio</title>
-    <meta name="description" content="Portfolio for Seth Swanson, an analytics and data science builder specializing in product analytics, SQL, Python, BI, automation, risk modeling, and decision systems.">
+    <meta name="description" content="Portfolio for Seth Swanson, an AI and data tools builder specializing in relational databases, API integrations, product analytics, SQL, Python, BI, automation, risk modeling, and decision systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,13 +31,13 @@
         <div class="hero-overlay"></div>
         <div class="hero-inner">
           <div class="hero-content">
-            <p class="eyebrow">Strategic Analytics / Data Science</p>
-            <h1 id="hero-title">Building analytics products that make decisions clearer.</h1>
-            <p class="hero-copy">I turn messy business questions into models, dashboards, product workflows, and decision tools that people can actually use.</p>
+            <p class="eyebrow">AI & Data Tools / Product Analytics</p>
+            <h1 id="hero-title">Building data tools that connect systems to decisions.</h1>
+            <p class="hero-copy">I turn messy business questions into relational databases, API workflows, models, dashboards, and product experiences that people can actually use.</p>
             <div class="credential-strip" aria-label="Education and role focus">
               <span>MS Data Analytics</span>
-              <span>Business-facing data science</span>
-              <span>Product-minded builder</span>
+              <span>Relational database design</span>
+              <span>API-integrated products</span>
             </div>
             <div class="hero-actions">
               <a class="button primary" href="#projects">View Projects</a>
@@ -54,17 +54,47 @@
       <section class="section intro-section" aria-label="Project focus">
         <div class="section-heading">
           <p class="eyebrow">Focus</p>
-          <h2>Data science, BI, and product work in one portfolio.</h2>
+          <h2>Data science, BI, and product engineering in one portfolio.</h2>
         </div>
         <div class="intro-copy">
           <p>
             My work sits between data science, BI, and product thinking: SQL models, Python workflows, executive
-            dashboards, risk segmentation, product analytics, and user-facing apps.
+            dashboards, risk segmentation, product analytics, API integrations, and user-facing apps.
           </p>
           <p>
-            The product builds show I can ship real tools. The machine learning projects show how I structure
-            reproducible analysis, explain models, and turn outputs into practical decisions.
+            The product builds show I can ship real tools with databases, auth, payments, external APIs, and deployed
+            infrastructure. The machine learning projects show how I structure reproducible analysis, explain models,
+            and turn outputs into practical decisions.
           </p>
+        </div>
+      </section>
+
+      <section class="section toolchain-section reveal-section" aria-labelledby="toolchain-title">
+        <div class="section-heading">
+          <p class="eyebrow">How I Build</p>
+          <h2 id="toolchain-title">Data tools with the plumbing and the product layer.</h2>
+        </div>
+        <div class="toolchain-grid">
+          <article>
+            <span>01</span>
+            <h3>Structure the data</h3>
+            <p>Design relational tables, user records, event flows, scoring inputs, validation checks, and reporting-ready datasets.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Connect APIs</h3>
+            <p>Integrate external services like job data, live draft data, email, payments, auth, AI calls, and backend functions.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Build decision logic</h3>
+            <p>Use scoring rules, model outputs, simulations, forecasts, and guardrails to turn raw data into ranked recommendations.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Ship the interface</h3>
+            <p>Wrap the logic in dashboards, apps, reports, and workflows that non-technical users can understand and act on.</p>
+          </article>
         </div>
       </section>
 
@@ -88,9 +118,16 @@
       <section class="section project-section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <p class="eyebrow">Featured Builds</p>
-          <h2 id="projects-title">Products, models, and decision tools that show the range.</h2>
+          <h2 id="projects-title">Products, models, and decision tools with real systems underneath.</h2>
         </div>
-        <div class="main-project-grid">
+        <div class="project-carousel reveal-section" data-project-carousel>
+          <div class="carousel-controls">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous project">&lt;</button>
+            <div class="carousel-dots" data-carousel-dots aria-label="Project carousel navigation"></div>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Next project">&gt;</button>
+          </div>
+          <div class="carousel-viewport">
+            <div class="main-project-grid carousel-track" data-carousel-track>
           <article class="main-project-card">
             <div class="main-project-media">
               <img src="assets/projects/myordr-showcase.png" alt="MyOrdr app website showing iPhone screens and order cards">
@@ -99,12 +136,12 @@
               <p class="project-kicker">Product Build / Mobile Analytics</p>
               <h3>MyOrdr</h3>
               <p>
-                Cross-platform iOS and Android social ordering app with a Supabase relational database, product
-                analytics, relevance-scored search, sharing flows, notifications, and deployed web infrastructure.
+                Cross-platform iOS and Android social ordering app with a Supabase relational database, auth,
+                product analytics, relevance-scored search, sharing flows, notifications, and deployed web infrastructure.
               </p>
               <p class="business-value">
-                Shows full-cycle product thinking: relational data design, search relevance, user flows, and analytics
-                infrastructure for a real consumer app.
+                Shows full-cycle data-tool thinking: normalized user/order data, search relevance, sharing workflows,
+                product analytics, and external service integrations.
               </p>
               <div class="project-meta">
                 <span>Flutter</span>
@@ -129,14 +166,14 @@
               </div>
             </div>
             <p class="project-kicker">Product Build / Assessment Analytics</p>
-            <h3>GiftPath</h3>
-            <p>
+              <h3>GiftPath</h3>
+              <p>
               Flutter web app for spiritual gifts and career discovery with deterministic scoring, career matching,
-              saved results, subscription flows, and live job search.
+              saved results, subscription flows, auth, persistence, and live job search APIs.
             </p>
             <p class="business-value">
-              Shows product analytics thinking: assessment logic, user state, conversion flow, persistence, and a
-              clear path from inputs to personalized recommendations.
+              Shows AI-engineer-adjacent product work: scoring logic, Supabase records, Edge Functions, Stripe
+              checkout, Adzuna/USAJOBS integrations, and recommendation-style outputs.
             </p>
             <div class="project-meta">
               <span>Flutter</span>
@@ -164,11 +201,11 @@
             <h3>Draft Assist IQ</h3>
             <p>
               Live fantasy football draft assistant that combines custom scoring, roster needs, availability
-              simulation, and opportunity-cost math into pick recommendations.
+              simulation, Sleeper API sync, and opportunity-cost math into pick recommendations.
             </p>
             <p class="business-value">
-              Demonstrates applied modeling in a fast decision environment: Monte Carlo availability, scoring
-              weights, state persistence, and plain-language recommendations.
+              Demonstrates applied decision engineering: public API ingestion, Monte Carlo availability, scoring
+              weights, local state persistence, and plain-language recommendations.
             </p>
             <div class="project-meta">
               <span>Next.js</span>
@@ -232,6 +269,8 @@
               <a href="ml_projects/synthetic_reit_risk/README.md">Code README</a>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 
