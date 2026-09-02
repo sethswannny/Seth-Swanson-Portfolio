@@ -179,89 +179,37 @@ a {
   width: min(760px, 100%);
 }
 
-.hero-profile-card {
+.hero-photo-frame {
   justify-self: center;
   position: relative;
-  width: min(520px, 100%);
-  padding: clamp(18px, 2vw, 24px);
-  border: 1px solid rgba(103, 232, 249, 0.18);
-  border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)),
-    linear-gradient(135deg, rgba(14, 28, 51, 0.94), rgba(7, 17, 31, 0.92));
-  box-shadow: 0 38px 100px rgba(0, 0, 0, 0.38);
-}
-
-.hero-profile-card::before {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  inset: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-}
-
-.profile-card-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-  color: rgba(255, 255, 255, 0.66);
-  font-size: 0.76rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.profile-identity {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 16px;
-  align-items: center;
-  padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.045);
-}
-
-.profile-identity strong {
-  display: block;
-  margin-bottom: 4px;
-  color: #ffffff;
-  font-size: 1.15rem;
-  line-height: 1.1;
-}
-
-.profile-identity p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.66);
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-
-.hero-portrait-wrap {
-  position: relative;
-  width: 92px;
+  width: min(410px, 32vw);
   aspect-ratio: 1;
   border-radius: 8px;
-  background: #0c182b;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
   overflow: hidden;
 }
 
-.hero-portrait-wrap::before {
+.hero-photo-frame::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   background:
-    linear-gradient(180deg, transparent 58%, rgba(5, 11, 24, 0.58)),
-    linear-gradient(135deg, rgba(103, 232, 249, 0.1), transparent 42%);
+    linear-gradient(180deg, transparent 58%, rgba(5, 11, 24, 0.22)),
+    linear-gradient(135deg, rgba(103, 232, 249, 0.08), transparent 44%);
   pointer-events: none;
   z-index: 1;
+}
+
+.hero-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(103, 232, 249, 0.22);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .hero-portrait {
@@ -270,63 +218,6 @@ a {
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-.profile-flow {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) auto minmax(0, 1.1fr) auto minmax(0, 0.9fr) auto minmax(0, 1.1fr);
-  gap: 8px;
-  align-items: center;
-  margin-top: 14px;
-  padding: 14px;
-  border: 1px solid rgba(103, 232, 249, 0.14);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(103, 232, 249, 0.08), rgba(255, 255, 255, 0.035));
-}
-
-.profile-flow span:not(.flow-arrow) {
-  min-height: 40px;
-  display: grid;
-  place-items: center;
-  padding: 8px 10px;
-  color: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 8px;
-  background: rgba(5, 11, 24, 0.42);
-  font-size: 0.8rem;
-  font-weight: 800;
-  text-align: center;
-}
-
-.flow-arrow {
-  color: var(--cyan);
-  font-size: 1.1rem;
-  font-weight: 850;
-}
-
-.profile-signal-grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.profile-signal-grid span {
-  min-height: 38px;
-  display: flex;
-  align-items: center;
-  padding: 8px 10px;
-  color: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(103, 232, 249, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  font-size: 0.82rem;
-  font-weight: 750;
 }
 
 .eyebrow {
@@ -1391,31 +1282,8 @@ h1 {
     padding-top: 42px;
   }
 
-  .hero-profile-card {
-    width: min(380px, 100%);
-  }
-
-  .profile-card-header {
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .profile-identity {
-    grid-template-columns: 76px minmax(0, 1fr);
-    padding: 12px;
-  }
-
-  .hero-portrait-wrap {
-    width: 76px;
-  }
-
-  .profile-flow {
-    grid-template-columns: 1fr;
-  }
-
-  .flow-arrow {
-    transform: rotate(90deg);
-    justify-self: center;
+  .hero-photo-frame {
+    width: min(300px, 82vw);
   }
 
   .hero-overlay {
