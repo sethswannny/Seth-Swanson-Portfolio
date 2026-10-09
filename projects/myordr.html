@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyOrdr Product Case Study | Seth Swanson</title>
+    <meta name="description" content="A portfolio case study by Seth Swanson: MyOrdr, a social ordering app built with mobile product workflows, relational data, search, sharing, and analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#systems">Systems</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="../assets/Seth-Swanson-Resume-AI-Business-Systems.docx" download>Resume</a>
+    </header>
+
+    <main>
+      <div class="case-nav">
+        <a class="back-link" href="../index.html#projects">Back to portfolio</a>
+      </div>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Mobile Product Case Study</p>
+          <h1>MyOrdr turns personal food preferences into reusable social data.</h1>
+          <p>
+            MyOrdr is a consumer app for saving, sharing, and discovering people’s go-to food and beverage orders.
+            The product is simple on the surface, but the system underneath needs clean user records, searchable order
+            data, sharing flows, notifications, and product analytics.
+          </p>
+          <div class="project-meta">
+            <span>Flutter</span>
+            <span>Supabase</span>
+            <span>Firebase</span>
+            <span>Search Relevance</span>
+            <span>Product Analytics</span>
+          </div>
+        </div>
+        <div class="case-stat-panel" aria-label="MyOrdr product summary">
+          <div>
+            <span>Mobile</span>
+            <p>iOS and Android product workflow</p>
+          </div>
+          <div>
+            <span>Social</span>
+            <p>profiles, saved orders, sharing, and discovery</p>
+          </div>
+          <div>
+            <span>Data</span>
+            <p>structured records for search and analytics</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-visual-grid">
+          <figure>
+            <img src="../assets/projects/myordr-showcase.png" alt="MyOrdr product showcase with mobile screens and order cards">
+            <figcaption>The app experience centers on fast lookup: what someone orders, where they order it, and how that preference can be shared.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/projects/myordr-1.png" alt="MyOrdr mobile interface screen">
+            <figcaption>Mobile screens were designed around repeat behavior rather than one-time content consumption.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">System Design</p>
+          <h2>The useful part is the data model behind a casual user action.</h2>
+        </div>
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Records</p>
+            <h2>Orders become structured preferences.</h2>
+            <p>
+              The app treats a saved order as more than text. A useful record needs the item, modifiers, location,
+              category, user relationship, timestamps, and enough metadata to support search and recommendation-style
+              discovery later.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Workflow</p>
+            <h2>Sharing has to feel instant.</h2>
+            <p>
+              The product flow depends on clean auth, reliable profile state, shareable order cards, and simple
+              retrieval. That makes MyOrdr a product analytics and data-modeling project as much as a mobile UI build.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="code-explain-grid">
+          <article class="code-explain-card">
+            <p class="eyebrow">01</p>
+            <h3>User and order model</h3>
+            <p>Normalize users, saved orders, locations, tags, and interaction events so the app can support lookup, edits, and analytics without fragile client logic.</p>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">02</p>
+            <h3>Search and discovery</h3>
+            <p>Rank order cards by text match, category, restaurant, and social proximity so the experience feels useful even as the dataset grows.</p>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">03</p>
+            <h3>Product feedback loop</h3>
+            <p>Track the events that matter: saves, shares, searches, profile visits, and repeat usage. The app can then improve from behavior instead of guesses.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">What This Shows</p>
+            <h2>I can move from product idea to working data system.</h2>
+            <p>
+              MyOrdr shows full-cycle product work: discovery, mobile interface design, backend records, authentication,
+              search behavior, sharing mechanics, deployment, and iteration around how people actually use the tool.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Links</p>
+            <h2>See the product surface.</h2>
+            <p>
+              The public link shows the consumer-facing product. The case study here explains the technical thinking
+              behind it without exposing private implementation details.
+            </p>
+            <div class="project-links">
+              <a href="https://app.myordr.co" target="_blank" rel="noreferrer">Live App</a>
+              <a href="https://www.datascienceportfol.io/sethswanson/projects/9" target="_blank" rel="noreferrer">Original Case Study</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+  </body>
+</html>

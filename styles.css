@@ -1639,6 +1639,59 @@ h1 {
   border-bottom: 0;
 }
 
+.product-diagram {
+  min-height: 100%;
+  display: grid;
+  gap: 12px;
+  align-content: center;
+  padding: clamp(24px, 5vw, 54px);
+  border: 1px solid rgba(20, 32, 31, 0.14);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(103, 232, 249, 0.16), transparent 34%),
+    linear-gradient(135deg, #ffffff, #f7f4ee);
+  box-shadow: 0 18px 54px rgba(20, 32, 31, 0.08);
+}
+
+.product-diagram span {
+  display: block;
+  padding: 14px 16px;
+  color: var(--teal-dark);
+  border: 1px solid rgba(11, 107, 104, 0.18);
+  border-radius: 8px;
+  background: rgba(11, 107, 104, 0.08);
+  font-weight: 850;
+}
+
+.draft-example-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.4fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 40px);
+  align-items: stretch;
+}
+
+.draft-example-panel > div:first-child {
+  display: grid;
+  align-content: center;
+  padding: clamp(24px, 5vw, 42px);
+  color: #ffffff;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 86% 18%, rgba(103, 232, 249, 0.24), transparent 32%),
+    linear-gradient(135deg, #050b18, #0f1b32);
+  box-shadow: 0 18px 54px rgba(20, 32, 31, 0.16);
+}
+
+.draft-example-panel h3 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 0.98;
+}
+
+.draft-example-panel > div:first-child p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.76);
+}
+
 .project-card.is-hidden {
   display: none;
 }
@@ -1843,7 +1896,8 @@ h1 {
   .rag-blueprint,
   .rag-chat-demo,
   .rag-structure-diagram,
-  .code-explain-grid {
+  .code-explain-grid,
+  .draft-example-panel {
     grid-template-columns: 1fr;
   }
 

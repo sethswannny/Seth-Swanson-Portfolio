@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draft Assist IQ Decision Engine | Seth Swanson</title>
+    <meta name="description" content="A portfolio case study by Seth Swanson: Draft Assist IQ, a fantasy football draft assistant using API data, roster context, scoring logic, and availability simulation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#systems">Systems</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="../assets/Seth-Swanson-Resume-AI-Business-Systems.docx" download>Resume</a>
+    </header>
+
+    <main>
+      <div class="case-nav">
+        <a class="back-link" href="../index.html#projects">Back to portfolio</a>
+      </div>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Decision Engine Case Study</p>
+          <h1>Draft Assist IQ ranks the pick, not just the player.</h1>
+          <p>
+            Draft Assist IQ is a live fantasy draft tool that weighs player value against roster needs, likely
+            availability, league context, and opportunity cost. The goal is to answer a practical question: who should
+            I take now, knowing who I can probably get later?
+          </p>
+          <div class="project-meta">
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>Sleeper API</span>
+            <span>Monte Carlo</span>
+            <span>Decision Logic</span>
+          </div>
+        </div>
+        <div class="case-stat-panel" aria-label="Draft Assist IQ summary">
+          <div>
+            <span>Live</span>
+            <p>draft context and roster state</p>
+          </div>
+          <div>
+            <span>Rank</span>
+            <p>player value plus positional urgency</p>
+          </div>
+          <div>
+            <span>Explain</span>
+            <p>plain-language recommendation reasoning</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">Example</p>
+          <h2>The app turns a messy draft board into a clear recommendation.</h2>
+        </div>
+        <div class="draft-example-panel" aria-label="Draft Assist IQ recommendation example">
+          <div>
+            <p class="eyebrow">Pick 42</p>
+            <h3>Recommended: WR</h3>
+            <p>High player value, thin remaining tier, and a larger drop-off before the next likely pick.</p>
+          </div>
+          <div class="metrics-table-wrap">
+            <table class="metrics-table">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Score</th>
+                  <th>Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Wide Receiver</td>
+                  <td>88</td>
+                  <td>Best value tier and high urgency</td>
+                </tr>
+                <tr>
+                  <td>Running Back</td>
+                  <td>81</td>
+                  <td>Strong value but similar options may remain</td>
+                </tr>
+                <tr>
+                  <td>Quarterback</td>
+                  <td>74</td>
+                  <td>Useful player, lower opportunity cost right now</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Problem</p>
+            <h2>Raw rankings ignore draft context.</h2>
+            <p>
+              Static rankings are helpful, but they miss the central decision: whether the value at one position is
+              scarce enough to take now. A decision engine needs to evaluate current roster gaps, league scoring,
+              market behavior, and likely future availability together.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Approach</p>
+            <h2>Score the decision from multiple angles.</h2>
+            <p>
+              The tool combines API player data, local draft state, roster construction, positional scarcity,
+              projected availability, and configurable scoring weights. The output is a ranked recommendation with
+              reasoning a user can understand quickly.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="code-explain-grid">
+          <article class="code-explain-card">
+            <p class="eyebrow">01</p>
+            <h3>Ingest live context</h3>
+            <p>Pull public player and draft context, then keep local state for drafted players, roster needs, and league settings.</p>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">02</p>
+            <h3>Simulate availability</h3>
+            <p>Estimate whether comparable players are likely to be available later, so recommendations reflect timing and opportunity cost.</p>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">03</p>
+            <h3>Explain the pick</h3>
+            <p>Turn the score into a short recommendation that tells the user why the move matters now.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">What This Shows</p>
+            <h2>Decision tools need both math and UX.</h2>
+            <p>
+              The interesting work is not only calculating a score. It is deciding which signals matter, keeping the
+              state current, explaining the recommendation clearly, and making the interface useful under time pressure.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Links</p>
+            <h2>Try the tool.</h2>
+            <p>
+              The live demo shows the decision workflow. This page frames it as a reusable pattern for ranking,
+              scoring, and routing decisions.
+            </p>
+            <div class="project-links">
+              <a href="https://sethswannny.github.io/draft-assist-iq/" target="_blank" rel="noreferrer">Live Tool</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+  </body>
+</html>

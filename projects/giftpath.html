@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GiftPath AI Career Matching Case Study | Seth Swanson</title>
+    <meta name="description" content="A portfolio case study by Seth Swanson: GiftPath, an AI-powered career discovery platform with scoring logic, saved results, live job data, auth, and payments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#systems">Systems</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="../assets/Seth-Swanson-Resume-AI-Business-Systems.docx" download>Resume</a>
+    </header>
+
+    <main>
+      <div class="case-nav">
+        <a class="back-link" href="../index.html#projects">Back to portfolio</a>
+      </div>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">AI Product Case Study</p>
+          <h1>GiftPath converts assessment answers into career recommendations.</h1>
+          <p>
+            GiftPath is an AI-powered career discovery platform that combines structured assessment data, scoring
+            logic, job-market APIs, authentication, saved results, and subscription infrastructure into one product.
+          </p>
+          <div class="project-meta">
+            <span>Flutter Web</span>
+            <span>Supabase</span>
+            <span>OpenAI APIs</span>
+            <span>Stripe</span>
+            <span>Job APIs</span>
+          </div>
+        </div>
+        <div class="case-stat-panel" aria-label="GiftPath product summary">
+          <div>
+            <span>Assess</span>
+            <p>structured responses become scored traits</p>
+          </div>
+          <div>
+            <span>Match</span>
+            <p>AI-assisted career recommendations and explanations</p>
+          </div>
+          <div>
+            <span>Act</span>
+            <p>live job data turns results into next steps</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-visual-grid">
+          <figure>
+            <img src="../assets/projects/giftpath-lockup-vertical.png" alt="GiftPath brand lockup">
+            <figcaption>GiftPath is framed as a product, not a one-off quiz: results persist, recommendations explain themselves, and job data gives the output a practical path.</figcaption>
+          </figure>
+          <figure>
+            <div class="product-diagram" aria-label="GiftPath workflow diagram">
+              <span>Assessment</span>
+              <span>Scoring Engine</span>
+              <span>AI Explanation</span>
+              <span>Career Matches</span>
+              <span>Live Jobs</span>
+            </div>
+            <figcaption>The workflow combines deterministic scoring with AI-generated interpretation and external job data.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">System Design</p>
+          <h2>A recommendation product needs guardrails before it needs polish.</h2>
+        </div>
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Scoring</p>
+            <h2>Keep the foundation deterministic.</h2>
+            <p>
+              Assessment answers are converted into structured scores first. That gives the AI layer a stable input
+              and makes the recommendation easier to explain, debug, and improve.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Recommendations</p>
+            <h2>Use AI where language adds value.</h2>
+            <p>
+              The model is best used to translate scores into plain-language career reasoning, not to invent the
+              entire result. That keeps the product useful while reducing opaque or inconsistent output.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="code-explain-grid">
+          <article class="code-explain-card">
+            <p class="eyebrow">01</p>
+            <h3>Product database</h3>
+            <p>Persist users, assessment responses, scores, saved results, subscriptions, and recommendation history so the product can support returning users.</p>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">02</p>
+            <h3>External integrations</h3>
+            <p>Connect payment, authentication, email, and job APIs so recommendations are tied to real product workflows instead of a static report.</p>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">03</p>
+            <h3>AI output layer</h3>
+            <p>Generate explainable career narratives from structured scores, then keep the output anchored to the assessment and visible match criteria.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">What This Shows</p>
+            <h2>I can ship AI products that still behave like systems.</h2>
+            <p>
+              GiftPath connects the pieces a real product needs: structured inputs, scoring rules, AI-assisted
+              explanation, live external data, auth, payment flows, persistence, and an interface that makes the
+              result feel usable.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Links</p>
+            <h2>See the product surface.</h2>
+            <p>
+              The live app shows the public experience. This page explains the data and automation thinking behind it.
+            </p>
+            <div class="project-links">
+              <a href="https://giftpath.app" target="_blank" rel="noreferrer">Live App</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+  </body>
+</html>
