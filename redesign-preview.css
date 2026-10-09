@@ -415,13 +415,33 @@ img {
 }
 
 .system-strip {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
   gap: clamp(4rem, 8vw, 8rem);
   align-items: center;
-  min-height: 100svh;
+  min-height: calc(100svh - 4.6rem);
   color: #fffaf0;
   background: var(--moss);
+  overflow: hidden;
+  scroll-margin-top: 4.6rem;
+}
+
+.system-strip::before {
+  content: "";
+  position: absolute;
+  inset: 8% 52% auto auto;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgba(233, 183, 80, 0.24);
+  border-radius: 999px;
+  opacity: 0.8;
+  transform: translate(var(--system-x, 0), var(--system-y, 0));
+}
+
+.system-strip > div {
+  position: relative;
+  z-index: 1;
 }
 
 .system-strip .kicker,
@@ -429,7 +449,76 @@ img {
   color: var(--sun);
 }
 
-.system-strip ol {
+.system-orbit {
+  position: absolute;
+  z-index: -1;
+  right: -7rem;
+  bottom: -10rem;
+  width: min(18rem, 48vw);
+  aspect-ratio: 1;
+  margin-top: 0;
+  border: 1px solid rgba(255, 250, 240, 0.16);
+  border-radius: 999px;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.system-orbit::before,
+.system-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border: 1px solid rgba(255, 250, 240, 0.12);
+  border-radius: inherit;
+}
+
+.system-orbit::after {
+  inset: 38%;
+  background: rgba(255, 250, 240, 0.06);
+}
+
+.system-orbit span {
+  position: absolute;
+  display: grid;
+  width: 3.3rem;
+  height: 3.3rem;
+  place-items: center;
+  color: var(--moss);
+  border-radius: 999px;
+  background: #fff9ef;
+  box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.18);
+  font-size: 0.66rem;
+  font-weight: 900;
+  opacity: 0.72;
+}
+
+.system-orbit span:nth-child(1) {
+  top: -0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.system-orbit span:nth-child(2) {
+  top: 50%;
+  right: -0.4rem;
+  transform: translateY(-50%);
+}
+
+.system-orbit span:nth-child(3) {
+  bottom: -0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.system-orbit span:nth-child(4) {
+  top: 50%;
+  left: -0.4rem;
+  transform: translateY(-50%);
+}
+
+.system-steps {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
@@ -442,7 +531,7 @@ img {
   overflow: hidden;
 }
 
-.system-strip li {
+.system-steps li {
   min-height: 10.6rem;
   display: grid;
   align-content: space-between;
@@ -450,16 +539,16 @@ img {
   background: rgba(255, 250, 240, 0.06);
 }
 
-.system-strip span {
+.system-steps span {
   color: var(--sun);
   font-weight: 900;
 }
 
-.system-strip strong {
+.system-steps strong {
   font-size: 1.05rem;
 }
 
-.system-strip p {
+.system-steps p {
   margin: 0;
   color: rgba(255, 250, 240, 0.72);
   font-size: 0.82rem;
@@ -471,6 +560,51 @@ img {
   display: grid;
   align-content: center;
   background: #fff9ef;
+  scroll-margin-top: 4.6rem;
+}
+
+.skills-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(18rem, 0.52fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.tool-panel {
+  padding: clamp(1.1rem, 2.5vw, 1.6rem);
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(233, 183, 80, 0.2), transparent 38%),
+    rgba(255, 255, 255, 0.32);
+}
+
+.tool-panel p {
+  margin: 0 0 1rem;
+  color: var(--clay);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tool-pills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.tool-pills span {
+  min-height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.62rem 0.82rem;
+  color: var(--moss);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.42);
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 .skill-columns {
@@ -485,6 +619,13 @@ img {
   border-top: 0.28rem solid var(--sun);
 }
 
+.skill-columns span {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  color: var(--clay);
+  font-weight: 900;
+}
+
 .skill-columns h3 {
   margin: 0 0 0.75rem;
   font-size: 1.2rem;
@@ -494,6 +635,35 @@ img {
   margin: 0;
   color: var(--soft-ink);
   line-height: 1.5;
+}
+
+.tool-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--line);
+}
+
+.tool-proof div {
+  display: grid;
+  gap: 0.55rem;
+  min-height: 7rem;
+  padding: 1.1rem;
+  background: #f5efe4;
+}
+
+.tool-proof strong {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.tool-proof span {
+  color: var(--soft-ink);
+  font-size: 0.86rem;
+  line-height: 1.35;
 }
 
 .contact-preview {

@@ -18,3 +18,15 @@ for (const card of document.querySelectorAll("[data-tilt]")) {
     card.style.transform = "";
   });
 }
+
+const systemSection = document.querySelector(".system-strip");
+
+if (systemSection) {
+  systemSection.addEventListener("pointermove", (event) => {
+    const rect = systemSection.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 28;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 28;
+    systemSection.style.setProperty("--system-x", `${x}px`);
+    systemSection.style.setProperty("--system-y", `${y}px`);
+  });
+}
