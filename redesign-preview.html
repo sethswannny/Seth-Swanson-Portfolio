@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seth Swanson | Portfolio Redesign Preview</title>
+    <meta name="description" content="Preview concept for Seth Swanson's analytics and data product portfolio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="redesign-preview.css">
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="preview-ribbon" aria-label="Preview version">
+      <span>Preview concept</span>
+      <span>Current site unchanged</span>
+      <span>Compact projects</span>
+      <span>Atico-inspired structure</span>
+    </div>
+
+    <header class="preview-header">
+      <a class="preview-brand" href="#top" aria-label="Seth Swanson preview home">
+        <span>SS</span>
+        <strong>Seth Swanson</strong>
+      </a>
+      <nav class="preview-nav" aria-label="Preview navigation">
+        <a href="#projects">Projects</a>
+        <a href="#systems">Systems</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="preview-cta" href="index.html">Current Site</a>
+    </header>
+
+    <main id="top">
+      <section class="hero-preview" aria-labelledby="preview-title">
+        <div class="hero-copy">
+          <p class="kicker">Analytics Engineering / Data Products</p>
+          <h1 id="preview-title">Data tools that make messy systems usable.</h1>
+          <p>
+            I design the tables, connect the APIs, build the decision logic, and ship the interface:
+            dashboards, apps, models, reports, and workflow automation.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects">See the work</a>
+            <a href="mailto:Sethswanson95@gmail.com">Start a conversation</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Portfolio snapshot">
+          <img src="assets/profile-pic.jpeg" alt="Seth Swanson">
+          <div>
+            <span>MS Data Analytics</span>
+            <span>SQL + Python</span>
+            <span>API-integrated products</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="proof-band" aria-label="Proof points">
+        <div>
+          <strong>2B+</strong>
+          <span>credible leads through guarded API validation workflows</span>
+        </div>
+        <div>
+          <strong>20 min -> 2 min</strong>
+          <span>dataset refresh time reduced through query and model redesign</span>
+        </div>
+        <div>
+          <strong>REIT</strong>
+          <span>portfolio health, risk review, and reporting decision tools</span>
+        </div>
+      </section>
+
+      <section class="projects-fit" id="projects" aria-labelledby="projects-title">
+        <div class="section-intro">
+          <p class="kicker">Featured builds</p>
+          <h2 id="projects-title">Projects that fit on the screen.</h2>
+          <p>
+            A compact editorial grid replaces the oversized carousel, so every project can be scanned
+            quickly before opening a deeper case study.
+          </p>
+        </div>
+
+        <div class="project-board">
+          <article class="showcase-card wide" data-tilt>
+            <a class="media-link" href="https://app.myordr.co" target="_blank" rel="noreferrer">
+              <img src="assets/projects/myordr-showcase.png" alt="MyOrdr app website showing iPhone screens and order cards">
+            </a>
+            <div>
+              <p>Product Build / Mobile Analytics</p>
+              <h3>MyOrdr</h3>
+              <span>Flutter, Supabase, auth, analytics, search relevance, sharing flows.</span>
+            </div>
+          </article>
+
+          <article class="showcase-card cream" data-tilt>
+            <a class="media-link" href="https://giftpath.app" target="_blank" rel="noreferrer">
+              <img src="assets/projects/giftpath-lockup-vertical.png" alt="GiftPath brand lockup">
+            </a>
+            <div>
+              <p>Assessment Analytics</p>
+              <h3>GiftPath</h3>
+              <span>Scoring logic, subscriptions, saved results, and live job APIs.</span>
+            </div>
+          </article>
+
+          <article class="showcase-card dark" data-tilt>
+            <div class="mini-terminal" aria-label="Draft Assist IQ recommendation example">
+              <span>Pick 42</span>
+              <strong>Draft Assist IQ</strong>
+              <small>WR 88 / high urgency</small>
+              <small>RB 81 / likely gone</small>
+              <small>QB 74 / waitable</small>
+            </div>
+            <div>
+              <p>Decision Engine</p>
+              <h3>Draft Assist IQ</h3>
+              <span>Monte Carlo availability, roster needs, Sleeper API sync.</span>
+            </div>
+          </article>
+
+          <article class="showcase-card dark" data-tilt>
+            <div class="rag-mini" aria-label="Chemistry RAG answer preview">
+              <b>How do I start stoichiometry?</b>
+              <span>Balance, convert, compare. Source: Unit 4 guide.</span>
+            </div>
+            <div>
+              <p>AI Product / Course RAG</p>
+              <h3>Chemistry Tutor</h3>
+              <span>Chunking, vector search, grounded answers, source citations.</span>
+            </div>
+          </article>
+
+          <article class="showcase-card" data-tilt>
+            <a class="media-link" href="projects/buell-market-value.html">
+              <img src="ml_projects/buell_market_value/reports/figures/actual_vs_predicted.png" alt="Actual versus predicted prices from the Buell market value model">
+            </a>
+            <div>
+              <p>Regression / Pricing</p>
+              <h3>Buell Market Value</h3>
+              <span>Pricing model, explainability, one-file report, Streamlit app.</span>
+            </div>
+          </article>
+
+          <article class="showcase-card" data-tilt>
+            <a class="media-link" href="projects/synthetic-reit-risk.html">
+              <img src="ml_projects/synthetic_reit_risk/reports/figures/exposure_by_property_type.png" alt="REIT portfolio exposure by property type and health status">
+            </a>
+            <div>
+              <p>Classification / Risk</p>
+              <h3>REIT Risk Model</h3>
+              <span>Asset health classifier for watchlist and risk review workflows.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="system-strip" id="systems" aria-labelledby="systems-title">
+        <div>
+          <p class="kicker">How I build</p>
+          <h2 id="systems-title">The product layer is only useful when the data layer is solid.</h2>
+        </div>
+        <ol>
+          <li><span>01</span><strong>Structure the data</strong><p>Tables, records, event flows, validation checks, reporting-ready datasets.</p></li>
+          <li><span>02</span><strong>Connect APIs</strong><p>Job data, draft data, email, payments, auth, model calls, backend functions.</p></li>
+          <li><span>03</span><strong>Build logic</strong><p>Scoring rules, model outputs, simulations, forecasts, and guardrails.</p></li>
+          <li><span>04</span><strong>Ship the interface</strong><p>Dashboards, apps, reports, and workflows people can actually use.</p></li>
+        </ol>
+      </section>
+
+      <section class="skills-preview" id="skills" aria-labelledby="skills-title">
+        <p class="kicker">Toolkit</p>
+        <h2 id="skills-title">Reliable analytics, shipped with product taste.</h2>
+        <div class="skill-columns">
+          <div><h3>Programming</h3><p>Python, pandas, NumPy, SQL, regression, EDA, probability analytics.</p></div>
+          <div><h3>BI</h3><p>Power BI, Tableau, Looker, DAX, dashboard design, executive reporting.</p></div>
+          <div><h3>Modeling</h3><p>SQL Server, dimensional models, fact tables, validation checks, SCDs.</p></div>
+          <div><h3>Products</h3><p>Flutter, Next.js, TypeScript, Supabase, Cloudflare, Stripe, Resend.</p></div>
+        </div>
+      </section>
+
+      <section class="contact-preview" id="contact" aria-labelledby="contact-title">
+        <p class="kicker">Available for data work</p>
+        <h2 id="contact-title">Let’s talk about systems that need clarity.</h2>
+        <div>
+          <a href="mailto:Sethswanson95@gmail.com">Sethswanson95@gmail.com</a>
+          <a href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="assets/Seth-Swanson-Resume-2026.docx" download>Resume</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="redesign-preview.js"></script>
+  </body>
+</html>
