@@ -539,7 +539,32 @@ h1 {
 
 .work-summary-section,
 .skills-section {
-  background: var(--paper);
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(103, 232, 249, 0.1), transparent 28%),
+    linear-gradient(180deg, #050b18 0%, #07111f 100%);
+}
+
+.work-summary-section .section-heading h2,
+.skills-section .section-heading h2 {
+  color: #ffffff;
+}
+
+.work-summary-section .eyebrow,
+.skills-section .eyebrow {
+  color: #f07b57;
+}
+
+.work-summary-section .project-card {
+  color: var(--ink);
+}
+
+.skills-section .skills-grid h3 {
+  color: #f5fffd;
+}
+
+.skills-section .skills-grid p {
+  color: rgba(237, 247, 246, 0.78);
 }
 
 .education-section,
