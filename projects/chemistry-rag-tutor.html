@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chemistry Class RAG Tutor | Seth Swanson</title>
+    <meta name="description" content="A portfolio case study by Seth Swanson: a retrieval-augmented chemistry class assistant for syllabus logistics, test dates, lab instructions, and stoichiometry tutoring.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b6b68'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='22' font-weight='700' fill='white'%3ESS%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Seth Swanson home">
+        <span class="brand-mark">SS</span>
+        <span>Seth Swanson</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/seth-swanson/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+      <a class="header-cta" href="../assets/Seth-Swanson-Resume-2026.docx" download>Resume</a>
+    </header>
+
+    <main>
+      <div class="case-nav">
+        <a class="back-link" href="../index.html#projects">Back to portfolio</a>
+      </div>
+      <section class="case-hero chemistry-case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">AI Engineering Case Study</p>
+          <h1>Chemistry Class RAG Tutor</h1>
+          <p>
+            A retrieval-augmented assistant concept for a chemistry course. Students can ask class-specific questions
+            like when a test is, what a lab requires, or how to solve stoichiometry problems, and the assistant answers
+            from the uploaded syllabus, calendar, study guides, labs, and notes.
+          </p>
+          <div class="project-meta">
+            <span>RAG</span>
+            <span>Embeddings</span>
+            <span>Vector Search</span>
+            <span>Prompt Guardrails</span>
+            <span>Course Tutor</span>
+          </div>
+        </div>
+        <div class="case-stat-panel" aria-label="RAG project summary">
+          <div>
+            <span>5</span>
+            <p>course document types indexed</p>
+          </div>
+          <div>
+            <span>3</span>
+            <p>answer modes: logistics, tutoring, lab help</p>
+          </div>
+          <div>
+            <span>100%</span>
+            <p>answers designed to cite source chunks</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Problem</p>
+            <h2>Students ask the same course questions in different words.</h2>
+            <p>
+              A chemistry class has scattered information: the syllabus, exam calendar, lab handouts, safety rules,
+              unit notes, and study guides. The goal is to make that material searchable through natural language
+              while keeping answers grounded in the actual course documents.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Use Cases</p>
+            <h2>It handles logistics and learning support.</h2>
+            <p>
+              The assistant can answer "When is the Unit 4 test?", "What should I bring to lab?", and "How do I do
+              stoichiometry?" For tutoring questions, it explains the method step by step and points back to the
+              relevant notes or study guide section.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">App Structure</p>
+          <h2>The important work is the retrieval system behind the chat.</h2>
+        </div>
+        <div class="rag-blueprint">
+          <article class="rag-essay-card">
+            <p>
+              I would not position this as a generic chatbot. The product is a course-specific retrieval system. The
+              teacher controls the source files, the app breaks those files into searchable chunks, and every student
+              answer is grounded in retrieved syllabus, calendar, lab, or study-guide content.
+            </p>
+            <p>
+              That matters for chemistry because students ask both administrative and instructional questions. "When
+              is the Unit 4 test?" needs an exact calendar lookup. "How do I do stoichiometry?" needs a teaching-style
+              explanation, but it should still pull from the class notes so the response matches the way the teacher
+              introduced the method.
+            </p>
+            <p>
+              The working files in this project show the same shape in miniature: sample course documents, a local
+              retrieval script, and a browser prototype. A production version would swap the keyword retriever for
+              embeddings, a vector database, and an LLM answer step.
+            </p>
+          </article>
+          <aside class="rag-product-mockup" aria-label="Mockup of Chemistry 101 RAG assistant">
+            <div class="mockup-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-sidebar">
+                <strong>Sources</strong>
+                <span>Syllabus</span>
+                <span>Calendar</span>
+                <span>Unit 4 Notes</span>
+                <span>Lab 4</span>
+              </div>
+              <div class="mockup-chat">
+                <div class="mockup-question">If 10.0 g of H2 reacts with O2, how many grams of H2O can form?</div>
+                <div class="mockup-answer">
+                  <strong>Worked example: grams H2 to grams H2O</strong>
+                  <ol>
+                    <li>Balance: 2H2 + O2 -> 2H2O.</li>
+                    <li>Convert H2 to moles: 10.0 g / 2.016 g/mol = 4.96 mol H2.</li>
+                    <li>Use the mole ratio: 2 mol H2 makes 2 mol H2O, so 4.96 mol H2 makes 4.96 mol H2O.</li>
+                    <li>Convert to grams: 4.96 mol x 18.015 g/mol = 89.4 g H2O.</li>
+                  </ol>
+                  <p>Assuming oxygen is available in excess, the theoretical yield is about 89.4 g of water.</p>
+                  <div>
+                    <span>Unit 4 Study Guide</span>
+                    <span>Stoichiometry Process</span>
+                    <span>Learning Targets</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">Architecture</p>
+            <h2>Course documents become searchable source chunks.</h2>
+            <p>
+              The system would ingest PDFs, Docs, and markdown notes; split them by headings, dates, and problem
+              types; embed the chunks; and retrieve the most relevant passages before calling the model. The answer
+              prompt would require citations, uncertainty language, and a fallback when the source material does not
+              contain the answer.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Evaluation</p>
+            <h2>The project can be tested like a real AI product.</h2>
+            <p>
+              I would build a small evaluation set of expected questions, including exam dates, late-work rules,
+              safety requirements, and multi-step chemistry problems. Each response would be checked for retrieval
+              relevance, citation quality, answer correctness, and whether it avoids inventing unsupported policies.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section case-band">
+        <div class="section-heading">
+          <p class="eyebrow">RAG Pipeline</p>
+          <h2>How the assistant would answer a question.</h2>
+        </div>
+        <div class="rag-structure-diagram" aria-label="RAG pipeline diagram">
+          <div class="rag-structure-node">
+            <span>01</span>
+            <h3>Course Docs</h3>
+            <p>Syllabus, calendar, labs, study guides, and unit notes.</p>
+          </div>
+          <div class="rag-structure-arrow" aria-hidden="true">&gt;</div>
+          <div class="rag-structure-node">
+            <span>02</span>
+            <h3>Chunks</h3>
+            <p>Split around dates, headings, procedures, and worked examples.</p>
+          </div>
+          <div class="rag-structure-arrow" aria-hidden="true">&gt;</div>
+          <div class="rag-structure-node">
+            <span>03</span>
+            <h3>Vector Index</h3>
+            <p>Searchable embeddings with metadata like unit, topic, and source.</p>
+          </div>
+          <div class="rag-structure-arrow" aria-hidden="true">&gt;</div>
+          <div class="rag-structure-node">
+            <span>04</span>
+            <h3>Retrieved Context</h3>
+            <p>Top matching course chunks are passed into the answer prompt.</p>
+          </div>
+          <div class="rag-structure-arrow" aria-hidden="true">&gt;</div>
+          <div class="rag-structure-node answer-node">
+            <span>05</span>
+            <h3>Cited Answer</h3>
+            <p>Student gets a grounded response with visible source chips.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="section-heading">
+          <p class="eyebrow">Code Structure</p>
+          <h2>The prototype code mirrors the production architecture.</h2>
+        </div>
+        <div class="code-explain-grid">
+          <article class="code-explain-card">
+            <p class="eyebrow">1. Course Material</p>
+            <h3>Documents are treated as source-of-truth records.</h3>
+            <p>
+              The sample files include a syllabus, course calendar, Unit 4 study guide, and percent-yield lab handout.
+              Each document is small here, but the same pattern works for teacher-uploaded PDFs, Docs, and notes.
+            </p>
+            <pre><code>sample_course_materials/
+  chemistry101_syllabus.md
+  course_calendar.md
+  unit4_study_guide.md
+  lab4_percent_yield.md</code></pre>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">2. Retrieval</p>
+            <h3>The demo ranks relevant chunks before answering.</h3>
+            <p>
+              The local Python version and browser version both load course chunks, score them against the question,
+              and return only the most relevant sources. In production, this scoring step becomes embedding similarity.
+            </p>
+            <pre><code>def retrieve(question, chunks, limit=3):
+    query_terms = tokenize(question)
+    scored = []
+    for chunk in chunks:
+        score = overlap(query_terms, chunk)
+        if score:
+            scored.append((score, chunk))
+    return top_matches(scored, limit)</code></pre>
+          </article>
+          <article class="code-explain-card">
+            <p class="eyebrow">3. Grounded Answer</p>
+            <h3>Answers cite the material they used.</h3>
+            <p>
+              A real LLM call would receive the retrieved chunks and a prompt that requires citations. If retrieval
+              fails, the assistant should say it cannot find the answer instead of inventing a date, policy, or grade.
+            </p>
+            <pre><code>if sources.length === 0:
+  return "I do not see that answer
+  in the course documents."</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="section case-section">
+        <div class="case-grid">
+          <article>
+            <p class="eyebrow">What I Would Build Next</p>
+            <h2>A full app with teacher-controlled source files.</h2>
+            <p>
+              The next version would include file upload, a teacher admin page, per-class document indexes, chat
+              history, feedback buttons, and an evaluation dashboard that flags weak answers or low-confidence
+              retrievals.
+            </p>
+          </article>
+          <article>
+            <p class="eyebrow">Artifacts</p>
+            <h2>The project folder is included in this portfolio.</h2>
+            <p>
+              The local files include a README, sample course materials, and implementation notes so a reviewer can
+              see how the RAG workflow would be structured.
+            </p>
+            <div class="project-links">
+              <a href="../ml_projects/chemistry_rag_tutor/dist/chemistry_rag_tutor_code.zip" download>Download Code</a>
+              <a href="../ml_projects/chemistry_rag_tutor/README.md">README</a>
+              <a href="../ml_projects/chemistry_rag_tutor/docs/architecture.md">Architecture Notes</a>
+              <a href="../ml_projects/chemistry_rag_tutor/sample_course_materials/chemistry101_syllabus.md">Sample Syllabus</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Seth Swanson. Built for analytics, automation, and clean decision-making.</p>
+    </footer>
+
+  </body>
+</html>
